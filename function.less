@@ -1,0 +1,70 @@
+/**
+ * Background Size
+ */
+.background-size (@width: 50px, @height: 50px) {
+  -webkit-background-size: @width @height;
+  -moz-background-size: @width @height;
+  background-size: @width @height;
+}
+
+/**
+ * Box shadow
+ */
+.box-shadow (@blur: 8px, @color: #ccc) {
+  -o-box-shadow: 1px 1px @blur @color;
+  -moz-box-shadow: 1px 1px @blur @color;
+  -webkit-box-shadow: 1px 1px @blur @color;
+  box-shadow: 1px 1px @blur @color;
+}
+
+/**
+ * Border radius
+ */
+.border-radius (@radius: 5px) {
+  -o-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/**
+ * Transforms
+ */
+.rotate (@rotate: 45deg) {
+  -o-transform: rotate(@rotate);
+  -moz-transform: rotate(@rotate);
+  -webkit-transform: rotate(@rotate);
+  -ms-transform: rotate(@rotate);
+  transform: rotate(@rotate);
+}
+.scale (@scale: 5) {
+  -o-transform: scale(@scale);
+  -moz-transform: scale(@scale);
+  -webkit-transform: scale(@scale);
+  -ms-transform: scale(@scale);
+  transform: scale(@scale);
+}
+
+/**
+ * Columns
+ */
+.columns (@count: 2, @padding: 10px) {
+  -o-column-count: @count;
+  -o-column-gap: @padding;
+  -moz-column-count: @count;
+  -moz-column-gap: @padding;
+  -webkit-column-count: @count;
+  -webkit-column-gap: @padding;
+  column-count: @count;
+  column-gap: @padding;
+}
+
+/**
+ * Text shadows
+ */
+.blur-text-shadow (@color: #ccc) {
+  text-shadow: @color 0px 0px 20px;
+}
+.line-text-shadow (@color: #ccc) {
+  text-shadow: @color 0px 1px 0px;
+}
