@@ -10,7 +10,7 @@
 /**
  * Background patterns
  */
-.background-square (@from: rgba(238, 241, 226, .5), @to: rgba(238, 241, 226, .5)) {
+.background-square (@from: rgba(200, 0, 0, .5), @to: rgba(200, 0, 0, .5)) {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, @from), to(@to)),
                     -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, @from), to(@to));
 
@@ -22,6 +22,8 @@
 
   background-image: linear-gradient(transparent 50%, @from 50%, @to),
                     linear-gradient(0deg, transparent 50%, @from 50%, @to);
+
+  .background-size(50px, 50px);
 }
 
 /**
