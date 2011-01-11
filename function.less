@@ -21,7 +21,9 @@
   .background-size(50px, 50px);
 }
 
-.background-square (@from: rgba(200, 0, 0, .5), @to: rgba(200, 0, 0, .5)) {
+.background-square (@from: rgba(200, 0, 0, .5), @to: rgba(200, 0, 0, .5), @default: #fff) {
+  background-color: @default;
+
   background-image: -o-linear-gradient(transparent 50%, @from 50%, @to),
                     -o-linear-gradient(0deg, transparent 50%, @from 50%, @to);
 
