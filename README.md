@@ -20,7 +20,9 @@ Current functions
 =================
 
  * background-size
- * background-square
+ * background-horizontal
+ * background-picnic
+ * highlight
  * box-shadow
  * border-radius
  * rotate
