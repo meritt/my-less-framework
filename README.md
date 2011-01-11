@@ -21,6 +21,7 @@ Current functions
 
  * background-size
  * background-horizontal
+ * background-vertical
  * background-picnic
  * highlight
  * box-shadow

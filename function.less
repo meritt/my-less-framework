@@ -21,6 +21,17 @@
   .background-size(50px, 50px);
 }
 
+.background-vertical (@from: rgba(255, 255, 255, .2), @to: #f90) {
+  background-color: @to;
+
+  background-image: -o-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+  background-image: -moz-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, @from), color-stop(.5, transparent), to(transparent));
+  background-image: linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+
+  .background-size(50px, 50px);
+}
+
 .background-picnic (@from: rgba(200, 0, 0, .5), @to: rgba(200, 0, 0, .5), @default: #fff) {
   background-color: @default;
 
