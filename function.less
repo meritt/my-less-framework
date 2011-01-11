@@ -25,6 +25,16 @@
 }
 
 /**
+ * Highlight transition
+ */
+.highlight (@attrib: background, @time: 500ms) {
+  -o-transition: @attrib @time;
+  -moz-transition: @attrib @time;
+  -webkit-transition: @attrib @time;
+  transition: @attrib @time;
+}
+
+/**
  * Box shadow
  */
 .box-shadow (@blur: 8px, @color: #ccc) {
