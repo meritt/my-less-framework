@@ -10,8 +10,8 @@
 /**
  * Background patterns
  */
-.background-horizontal (@from: rgba(255, 255, 255, .2), @to: #0ae) {
-  background-color: @to;
+.background-horizontal (@from: rgba(255, 255, 255, .2), @default: #0ae) {
+  background-color: @default;
 
   background-image: -o-linear-gradient(@from 50%, transparent 50%, transparent);
   background-image: -moz-linear-gradient(@from 50%, transparent 50%, transparent);
@@ -21,8 +21,8 @@
   .background-size(50px, 50px);
 }
 
-.background-vertical (@from: rgba(255, 255, 255, .2), @to: #f90) {
-  background-color: @to;
+.background-vertical (@from: rgba(255, 255, 255, .2), @default: #f90) {
+  background-color: @default;
 
   background-image: -o-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
   background-image: -moz-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
