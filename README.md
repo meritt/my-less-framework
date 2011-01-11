@@ -1,9 +1,9 @@
 Wait, what is the LESS?
 =======================
 
-If you don't know about LESS you can read about it here: [[http://lesscss.org]]
+If you don't know about LESS you can read about it here: [lesscss.org](http://lesscss.org)
 
-Mac OS X Application for LESS [[http://incident57.com/less/]]
+Mac OS X Application for LESS [incident57.com/less/](http://incident57.com/less/)
 
 Installing
 ==========
