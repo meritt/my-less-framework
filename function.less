@@ -2,8 +2,8 @@
  * Background Size
  */
 .background-size (@width: 50px, @height: 50px) {
-  -webkit-background-size: @width @height;
   -moz-background-size: @width @height;
+  -webkit-background-size: @width @height;
   background-size: @width @height;
 }
 
@@ -11,14 +11,14 @@
  * Background patterns
  */
 .background-square (@from: rgba(200, 0, 0, .5), @to: rgba(200, 0, 0, .5)) {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, @from), to(@to)),
-                    -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, @from), to(@to));
+  background-image: -o-linear-gradient(transparent 50%, @from 50%, @to),
+                    -o-linear-gradient(0deg, transparent 50%, @from 50%, @to);
 
   background-image: -moz-linear-gradient(transparent 50%, @from 50%, @to),
                     -moz-linear-gradient(0deg, transparent 50%, @from 50%, @to);
 
-  background-image: -o-linear-gradient(transparent 50%, @from 50%, @to),
-                    -o-linear-gradient(0deg, transparent 50%, @from 50%, @to);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, @from), to(@to)),
+                    -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, @from), to(@to));
 
   background-image: linear-gradient(transparent 50%, @from 50%, @to),
                     linear-gradient(0deg, transparent 50%, @from 50%, @to);
