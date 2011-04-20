@@ -23,6 +23,7 @@ Current functions
  * background-horizontal
  * background-vertical
  * background-picnic
+ * scrollbar
  * highlight
  * box-shadow
  * border-radius

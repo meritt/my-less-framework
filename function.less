@@ -50,6 +50,43 @@
 }
 
 /**
+ * Scrollbars like twitter
+ */
+.scrollbar (@color: rgba(0, 0, 0, 0.2), @width: 7px, @height: 9px, @border-radius: 4px) {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: @width;
+    height: @height;
+  }
+
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 0;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+      -webkit-border-radius: 0;
+      -webkit-border-bottom-right-radius: @border-radius;
+      -webkit-border-bottom-left-radius: @border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+      height: 50px;
+      background-color: @color;
+      -webkit-border-radius: @border-radius;
+  }
+
+  &::-webkit-scrollbar-thumb:horizontal {
+      width: 50px;
+      background-color: @color;
+      -webkit-border-radius: @border-radius;
+  }
+}
+
+/**
  * Highlight transition
  */
 .highlight (@attrib: background, @time: 500ms) {
