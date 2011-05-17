@@ -50,6 +50,20 @@
 }
 
 /**
+ * Simple gradient from top to bottom
+ */
+.top-gradient (@from, @to, @color) {
+  background-color: @color;
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+  background-image: -webkit-linear-gradient(top, @from, @to);
+  background-image:    -moz-linear-gradient(top, @from, @to);
+  background-image:     -ms-linear-gradient(top, @from, @to);
+  background-image:      -o-linear-gradient(top, @from, @to);
+  background-image:         linear-gradient(top, @from, @to);
+}
+
+/**
  * Scrollbars like twitter
  */
 .scrollbar (@color: rgba(0, 0, 0, 0.2), @width: 7px, @height: 9px, @border-radius: 4px) {
