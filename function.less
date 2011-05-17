@@ -2,9 +2,9 @@
  * Background Size
  */
 .background-size (@width: 50px, @height: 50px) {
-  -moz-background-size: @width @height;
-  -webkit-background-size: @width @height;
-  background-size: @width @height;
+  -webkit-background-size: @arguments;
+     -moz-background-size: @arguments;
+          background-size: @arguments;
 }
 
 /**
@@ -53,14 +53,16 @@
  * Simple gradient from top to bottom
  */
 .top-gradient (@from, @to, @color) {
+  @value: top @from @to;
+
   background-color: @color;
 
   background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
-  background-image: -webkit-linear-gradient(top, @from, @to);
-  background-image:    -moz-linear-gradient(top, @from, @to);
-  background-image:     -ms-linear-gradient(top, @from, @to);
-  background-image:      -o-linear-gradient(top, @from, @to);
-  background-image:         linear-gradient(top, @from, @to);
+  background-image: -webkit-linear-gradient(@value);
+  background-image:    -moz-linear-gradient(@value);
+  background-image:     -ms-linear-gradient(@value);
+  background-image:      -o-linear-gradient(@value);
+  background-image:         linear-gradient(@value);
 }
 
 /**
@@ -103,52 +105,57 @@
 /**
  * Highlight transition
  */
-.highlight (@attrib: background, @time: 500ms) {
-  -o-transition: @attrib @time;
-  -moz-transition: @attrib @time;
-  -webkit-transition: @attrib @time;
-  transition: @attrib @time;
+.highlight (@attrib: background, @time: 500ms, @method: ease-out) {
+  -webkit-transition: @arguments;
+     -moz-transition: @arguments;
+      -ms-transition: @arguments;
+       -o-transition: @arguments;
+          transition: @arguments;
 }
 
 /**
  * Box shadow
  */
 .box-shadow (@blur: 8px, @color: #ccc) {
-  -moz-box-shadow: 1px 1px @blur @color;
-  -webkit-box-shadow: 1px 1px @blur @color;
-  box-shadow: 1px 1px @blur @color;
+  @value: 1px 1px @blur @color;
+
+  -webkit-box-shadow: @value;
+     -moz-box-shadow: @value;
+          box-shadow: @value;
 }
 
 /**
  * Border radius
  */
 .border-radius (@radius: 5px) {
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-  border-radius: @radius;
+  -webkit-border-radius: @arguments;
+     -moz-border-radius: @arguments;
+          border-radius: @arguments;
 
-  -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
 }
 
 /**
  * Transforms
  */
 .rotate (@rotate: 45deg) {
-  -o-transform: rotate(@rotate);
-  -moz-transform: rotate(@rotate);
   -webkit-transform: rotate(@rotate);
-  -ms-transform: rotate(@rotate);
-  transform: rotate(@rotate);
+     -moz-transform: rotate(@rotate);
+      -ms-transform: rotate(@rotate);
+       -o-transform: rotate(@rotate);
+          transform: rotate(@rotate);
+
   zoom: 1;
 }
 .scale (@scale: 5) {
-  -o-transform: scale(@scale);
-  -moz-transform: scale(@scale);
   -webkit-transform: scale(@scale);
-  -ms-transform: scale(@scale);
-  transform: scale(@scale);
+     -moz-transform: scale(@scale);
+      -ms-transform: scale(@scale);
+       -o-transform: scale(@scale);
+          transform: scale(@scale);
+
   zoom: 1;
 }
 
@@ -156,14 +163,15 @@
  * Columns
  */
 .columns (@count: 2, @padding: 10px) {
-  -o-column-count: @count;
-  -o-column-gap: @padding;
-  -moz-column-count: @count;
-  -moz-column-gap: @padding;
   -webkit-column-count: @count;
+     -moz-column-count: @count;
+       -o-column-count: @count;
+          column-count: @count;
+
   -webkit-column-gap: @padding;
-  column-count: @count;
-  column-gap: @padding;
+     -moz-column-gap: @padding;
+       -o-column-gap: @padding;
+          column-gap: @padding;
 }
 
 /**
