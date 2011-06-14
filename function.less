@@ -189,6 +189,21 @@
 }
 
 /**
+ *  Animations
+ */
+.animation (@name, @count: infinite, @timing: linear, @duration: 5s) {
+  -webkit-animation-name: @name;
+  -webkit-animation-iteration-count: @count;
+  -webkit-animation-timing-function: @timing;
+  -webkit-animation-duration: @duration;
+
+  -moz-animation-name: @name;
+  -moz-animation-iteration-count: @count;
+  -moz-animation-timing-function: @timing;
+  -moz-animation-duration: @duration;
+}
+
+/**
  * Columns
  */
 .columns (@count: 2, @padding: 10px) {
