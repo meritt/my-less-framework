@@ -189,18 +189,14 @@
 }
 
 /**
- *  Animations
+ * Animations
  */
-.animation (@name, @count: infinite, @timing: linear, @duration: 5s) {
-  -webkit-animation-name: @name;
-  -webkit-animation-iteration-count: @count;
-  -webkit-animation-timing-function: @timing;
-  -webkit-animation-duration: @duration;
+.animation (@name, @duration: 5s, @count: infinite) {
+  @value: @name @duration @count;
 
-  -moz-animation-name: @name;
-  -moz-animation-iteration-count: @count;
-  -moz-animation-timing-function: @timing;
-  -moz-animation-duration: @duration;
+  -webkit-animation: @value;
+     -moz-animation: @value;
+      -ms-animation: @value;
 }
 
 /**
@@ -226,4 +222,14 @@
 }
 .line-text-shadow (@color: #ccc) {
   text-shadow: @color 0px 1px 0px;
+}
+
+/**
+ * Opacity
+ */
+.opacity (@opacity: 0.5) {
+  @ie: @opacity * 100;
+
+  opacity: @opacity;
+  filter: alpha(opacity=@ie);
 }
