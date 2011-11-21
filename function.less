@@ -231,5 +231,5 @@
   @ie: @opacity * 100;
 
   opacity: @opacity;
-  filter: alpha(opacity=@ie);
+  filter: ~`'alpha(opacity=@{ie})'`;
 }
