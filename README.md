@@ -22,6 +22,7 @@ Current functions
 **Basic**
 
  * opacity
+ * user-select
 
 **Animations**
 
