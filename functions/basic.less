@@ -8,6 +8,18 @@
   filter: ~`'alpha(opacity=@{ie})'`;
 }
 
+/**
+ * Text wrap
+ */
+.wrap () {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  text-wrap: wrap;
+}
+
+/**
+ * Behavior when user select
+ */
 .user-select (@value: none) {
   @none: -moz-none;
   @text: text;
