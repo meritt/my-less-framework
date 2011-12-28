@@ -1,0 +1,22 @@
+/**
+ * Box shadow
+ */
+.box-shadow (@offset-x: 1px, @offset-y: 1px, @blur: 8px, @color: #ccc) {
+  -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+
+/**
+ * Blur text shadows
+ */
+.blur-text-shadow (@color: #ccc) {
+  text-shadow: @color 0px 0px 20px;
+}
+
+/**
+ * Line text shadows
+ */
+.line-text-shadow (@color: #ccc) {
+  text-shadow: @color 0px 1px 0px;
+}

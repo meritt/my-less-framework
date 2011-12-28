@@ -1,0 +1,89 @@
+/**
+ * Background Size
+ */
+.background-size (@width: 50px, @height: 50px) {
+  -webkit-background-size: @arguments;
+     -moz-background-size: @arguments;
+       -o-background-size: @arguments;
+          background-size: @arguments;
+}
+
+/**
+ * Linear gradients
+ */
+.linear-gradient (@angle: top, @from: rgb(255, 255, 255) , @to: rgb(0, 0, 0)) {
+  background-color: @from;
+
+  background-image: -webkit-linear-gradient(@arguments);
+  background-image:    -moz-linear-gradient(@arguments);
+  background-image:     -ms-linear-gradient(@arguments);
+  background-image:      -o-linear-gradient(@arguments);
+  background-image:         linear-gradient(@arguments);
+}
+
+/**
+ * Radial gradients
+ */
+.radial-gradient (@position: 50% 50%, @from: rgb(255, 255, 255), @to: rgb(0, 0, 0)) {
+  background-color: @from;
+
+  background-image: -webkit-radial-gradient(@arguments);
+  background-image:    -moz-radial-gradient(@arguments);
+  background-image:     -ms-radial-gradient(@arguments);
+  background-image:      -o-radial-gradient(@arguments);
+  background-image:         radial-gradient(@arguments);
+}
+
+/**
+ * Background patterns
+ * Source: http://leaverou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
+ */
+.background-horizontal (@from: rgba(255, 255, 255, 0.2), @to: #0ae) {
+  background-color: @to;
+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, @from), color-stop(.5, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(@from 50%, transparent 50%, transparent);
+  background-image:    -moz-linear-gradient(@from 50%, transparent 50%, transparent);
+  background-image:     -ms-radial-gradient(@from 50%, transparent 50%, transparent);
+  background-image:      -o-linear-gradient(@from 50%, transparent 50%, transparent);
+  background-image:         linear-gradient(@from 50%, transparent 50%, transparent);
+
+  .background-size(50px, 50px);
+}
+
+.background-vertical (@from: rgba(255, 255, 255, 0.2), @to: #f90) {
+  background-color: @to;
+
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, @from), color-stop(.5, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+  background-image:    -moz-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+  background-image:     -ms-radial-gradient(0deg, @from 50%, transparent 50%, transparent);
+  background-image:      -o-linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+  background-image:         linear-gradient(0deg, @from 50%, transparent 50%, transparent);
+
+  .background-size(50px, 50px);
+}
+
+.background-picnic (@from: rgba(200, 0, 0, 0.5), @to: rgba(200, 0, 0, 0.5), @body: #fff) {
+  background-color: @body;
+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, @from), to(@to)),
+                    -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, @from), to(@to));
+
+  background-image: -webkit-linear-gradient(transparent 50%, @from 50%, @to),
+                    -webkit-linear-gradient(0deg, transparent 50%, @from 50%, @to);
+
+  background-image: -moz-linear-gradient(transparent 50%, @from 50%, @to),
+                    -moz-linear-gradient(0deg, transparent 50%, @from 50%, @to);
+
+  background-image: -ms-linear-gradient(transparent 50%, @from 50%, @to),
+                    -ms-linear-gradient(0deg, transparent 50%, @from 50%, @to);
+
+  background-image: -o-linear-gradient(transparent 50%, @from 50%, @to),
+                    -o-linear-gradient(0deg, transparent 50%, @from 50%, @to);
+
+  background-image: linear-gradient(transparent 50%, @from 50%, @to),
+                    linear-gradient(0deg, transparent 50%, @from 50%, @to);
+
+  .background-size(50px, 50px);
+}

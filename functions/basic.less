@@ -1,0 +1,9 @@
+/**
+ * Opacity
+ */
+.opacity (@opacity: 0.5) {
+  @ie: @opacity * 100;
+
+  opacity: @opacity;
+  filter: ~`'alpha(opacity=@{ie})'`;
+}
