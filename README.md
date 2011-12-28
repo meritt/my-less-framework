@@ -26,7 +26,7 @@ Current functions
 
 **Animations**
 
- * highlight
+ * transition
  * rotate
  * scale
  * animation
