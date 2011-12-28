@@ -8,13 +8,13 @@ Mac OS X Application for LESS [incident57.com/less/](http://incident57.com/less/
 Installing
 ==========
 
-		git submodule add git@github.com:meritt/my-less-framework.git public/css/less-framework
+    git submodule add git@github.com:meritt/my-less-framework.git public/css/less-framework
 
 And after that you need to import it in your style file, for example
 
 Edit public/css/style.less
 
-		@import "less-framework/framework.less";
+    @import "less-framework/framework.less";
 
 Current functions
 =================
@@ -58,6 +58,7 @@ Current functions
 **Shadows**
 
  * box-shadow
+ * inset-box-shadow
  * blur-text-shadow
  * line-text-shadow
 
@@ -68,7 +69,7 @@ Partial using
 
 Also, you can use this in partial, for example if you need only CSS3 function, you can do this in following way:
 
-		@import "less-framework/function.less";
+    @import "less-framework/function.less";
 
 Author
 ======

@@ -8,6 +8,17 @@
 }
 
 /**
+ * Double inset box shadow
+ */
+.inset-box-shadow (@blur: 0, @color: rgb(0, 0, 0), @blur-inset: 0, @spread: 0, @color-inset: rgba(0, 0, 0, 0.3)) {
+  @value: 0 0 @blur @color, inset 0 0 @blur-inset @spread @color-inset;
+
+  -webkit-box-shadow: @value;
+     -moz-box-shadow: @value;
+          box-shadow: @value;
+}
+
+/**
  * Blur text shadows
  */
 .blur-text-shadow (@color: #ccc) {
