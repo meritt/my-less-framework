@@ -3,18 +3,18 @@ Wait, what is the LESS?
 
 If you don't know about LESS you can read about it here: [lesscss.org](http://lesscss.org)
 
-Mac OS X Application for LESS [incident57.com/less/](http://incident57.com/less/)
+Mac OS X application for LESS [incident57.com/codekit](http://incident57.com/codekit/)
 
 Installing
 ==========
 
-    git submodule add git@github.com:meritt/my-less-framework.git public/css/less-framework
+    git submodule add git://github.com/meritt/my-less-framework.git public/css/mlf
 
 And after that you need to import it in your style file, for example
 
-Edit public/css/style.less
+Insert into your style.less
 
-    @import "less-framework/framework.less";
+    @import "mlf/framework.less";
 
 Current functions
 =================
@@ -68,9 +68,9 @@ Additional it includes reset styles, and default rules for elements.
 Partial using
 =============
 
-Also, you can use this in partial, for example if you need only CSS3 function, you can do this in following way:
+Also, you can use this in partial, for example if you need only animations and transformations CSS3 functions, you can do this in following way:
 
-    @import "less-framework/function.less";
+    @import "mlf/functions/animations.less";
 
 Author
 ======
