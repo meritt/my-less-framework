@@ -59,7 +59,6 @@ Current functions
 **Shadows**
 
  * box-shadow
- * inset-box-shadow
  * blur-text-shadow
  * line-text-shadow
 
