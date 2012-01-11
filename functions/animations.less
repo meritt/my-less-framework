@@ -1,7 +1,14 @@
 /**
  * Animation attributes
  */
-.transition (@property: all, @duration: 500ms, @timing: ease-out, @delay: 0s) {
+ .transition (@property: all, @duration: 500ms, @timing: ease-out, @delay: 0s) when (@property = box-shadow) {
+  -webkit-transition: -webkit-box-shadow @duration @timing @delay;
+     -moz-transition: -moz-box-shadow    @duration @timing @delay;
+      -ms-transition: @property          @duration @timing @delay;
+       -o-transition: @property          @duration @timing @delay;
+          transition: @property          @duration @timing @delay;
+}
+.transition (@property: all, @duration: 500ms, @timing: ease-out, @delay: 0s) when not (@property = box-shadow) {
   -webkit-transition: @arguments;
      -moz-transition: @arguments;
       -ms-transition: @arguments;
