@@ -1,6 +1,4 @@
-/**
- * Background clip
- */
+// Background clip
 .background-clip (@value: padding-box) {
 	@border-box:  border;
 	@padding-box: padding;
@@ -11,9 +9,7 @@
           background-clip: @value;
 }
 
-/**
- * Border radius
- */
+// Border radius
 .border-radius (@radius: 5px) {
   -webkit-border-radius: @arguments;
      -moz-border-radius: @arguments;
@@ -22,9 +18,7 @@
   .background-clip();
 }
 
-/**
- * Left border radius
- */
+// Left border radius
 .border-left-radius (@radius: 5px) {
   -webkit-border-top-left-radius:    @arguments;
   -webkit-border-bottom-left-radius: @arguments;
@@ -38,9 +32,7 @@
   .background-clip();
 }
 
-/**
- * Right border radius
- */
+// Right border radius
 .border-right-radius (@radius: 5px) {
   -webkit-border-top-right-radius:    @arguments;
   -webkit-border-bottom-right-radius: @arguments;

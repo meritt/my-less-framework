@@ -1,6 +1,4 @@
-/**
- * Background Size
- */
+// Background Size
 .background-size (@width: 50px, @height: 50px) {
   -webkit-background-size: @arguments;
      -moz-background-size: @arguments;
@@ -8,9 +6,7 @@
           background-size: @arguments;
 }
 
-/**
- * Linear gradients
- */
+// Linear gradients
 .linear-gradient (@angle: top, @from: rgb(255, 255, 255), @to: rgb(0, 0, 0)) {
   background-color: @from;
 
@@ -24,9 +20,7 @@
   background-image:         linear-gradient(@@angle, @from, @to);
 }
 
-/**
- * Radial gradients
- */
+// Radial gradients
 .radial-gradient (@position: 50% 50%, @from: rgb(255, 255, 255), @to: rgb(0, 0, 0)) {
   background-color: @from;
 
@@ -37,10 +31,8 @@
   background-image:         radial-gradient(@position, @from, @to);
 }
 
-/**
- * Background patterns
- * Source: http://leaverou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
- */
+// Background patterns
+// Source: http://leaverou.me/2010/12/checkered-stripes-other-background-patterns-with-css3-gradients/
 .background-horizontal (@from: #0ae, @to: rgba(255, 255, 255, 0.2)) {
   background-color: @from;
 

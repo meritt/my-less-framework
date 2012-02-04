@@ -1,6 +1,4 @@
-/**
- * Animation attributes
- */
+// Animation attributes
 .transition (@property: all, @duration: 500ms, @timing: ease-out, @delay: 0s) {
   -webkit-transition: @arguments;
      -moz-transition: @arguments;
@@ -9,9 +7,7 @@
           transition: @arguments;
 }
 
-/**
- * Rotate transforms
- */
+// Rotate transforms
 .rotate (@rotate: 45deg) {
   -webkit-transform: rotate(@rotate);
      -moz-transform: rotate(@rotate);
@@ -22,9 +18,7 @@
   zoom: 1;
 }
 
-/**
- * Scale transforms
- */
+// Scale transforms
 .scale (@scale: 5) {
   -webkit-transform: scale(@scale);
      -moz-transform: scale(@scale);
@@ -35,9 +29,7 @@
   zoom: 1;
 }
 
-/**
- * Animations
- */
+// Animations
 .animation (@name, @duration: 5s, @timing: ease, @count: infinite) {
   -webkit-animation: @arguments;
      -moz-animation: @arguments;
