@@ -1,17 +1,31 @@
 // Background Size
-.background-size (@width: 50px, @height: 50px) {
-  -webkit-background-size: @arguments;
-     -moz-background-size: @arguments;
-       -o-background-size: @arguments;
-          background-size: @arguments;
+.background-size (@size: 50px 50px) {
+  -webkit-background-size: @size;
+     -moz-background-size: @size;
+       -o-background-size: @size;
+          background-size: @size;
+}
+
+// Linear gradient filter for IE 6-9
+.ms-filter (@angle, @from, @to) {
+  @top:    0;
+  @bottom: 0;
+  @left:   1;
+  @right:  1;
+
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=%d)", @from, @to, @@angle));
 }
 
 // Linear gradients
 .linear-gradient (@angle: top, @from: rgb(255, 255, 255), @to: rgb(0, 0, 0)) {
-  background-color: @from;
+  background-color: @to;
 
-  @top: to bottom;
+  @top:    to bottom;
   @bottom: to top;
+  @left:   to right;
+  @right:  to left;
+
+  .ms-filter(@angle, @from, @to);
 
   background-image: -webkit-linear-gradient(@angle, @from, @to);
   background-image:    -moz-linear-gradient(@angle, @from, @to);
@@ -22,13 +36,15 @@
 
 // Radial gradients
 .radial-gradient (@position: 50% 50%, @from: rgb(255, 255, 255), @to: rgb(0, 0, 0)) {
-  background-color: @from;
+  background-color: @to;
 
   background-image: -webkit-radial-gradient(@position, @from, @to);
   background-image:    -moz-radial-gradient(@position, @from, @to);
   background-image:     -ms-radial-gradient(@position, @from, @to);
   background-image:      -o-radial-gradient(@position, @from, @to);
   background-image:         radial-gradient(@position, @from, @to);
+
+  background-repeat: no-repeat;
 }
 
 // Background patterns
@@ -42,7 +58,7 @@
   background-image:      -o-linear-gradient(transparent 50%, @to 50%);
   background-image:         linear-gradient(transparent 50%, @to 50%);
 
-  .background-size(50px, 50px);
+  .background-size(50px 50px);
 }
 
 .background-vertical (@from: #f90, @to: rgba(255, 255, 255, 0.2)) {
@@ -54,7 +70,7 @@
   background-image:      -o-linear-gradient(0, transparent 50%, @to 50%);
   background-image:         linear-gradient(0, transparent 50%, @to 50%);
 
-  .background-size(50px, 50px);
+  .background-size(50px 50px);
 }
 
 .background-picnic (@from: rgba(200, 0, 0, 0.5), @to: rgba(200, 0, 0, 0.5), @bgcolor: #fff) {
@@ -75,5 +91,5 @@
   background-image: linear-gradient(0, @from 50%, transparent 50%),
                     linear-gradient(@to 50%, transparent 50%);
 
-  .background-size(50px, 50px);
+  .background-size(50px 50px);
 }
