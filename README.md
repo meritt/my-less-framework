@@ -30,6 +30,8 @@ Current functions
  * transition
  * rotate
  * scale
+ * translate
+ * skew
  * animation
 
 **Backgrounds**

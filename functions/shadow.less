@@ -1,17 +1,8 @@
 // Box shadow
-.box-shadow (@offset-x: 1px, @offset-y: 1px, @blur: 8px, @color: #ccc) when (isnumber(@offset-y)) {
-  -webkit-box-shadow: @arguments;
-     -moz-box-shadow: @arguments;
-          box-shadow: @arguments;
-}
-
-// Double inset box shadow
-.box-shadow (@blur, @color, @blur-inset, @spread-inset, @color-inset) when (iscolor(@color-inset)) {
-  @value: 0 0 @blur @color, inset 0 0 @blur-inset @spread-inset @color-inset;
-
-  -webkit-box-shadow: @value;
-     -moz-box-shadow: @value;
-          box-shadow: @value;
+.box-shadow (@shadow: 1px 1px 8px #ccc) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
 }
 
 // Blur text shadows
