@@ -1,16 +1,28 @@
-// Box shadow
-.box-shadow (@shadow: 1px 1px 8px #ccc) {
-  -webkit-box-shadow: @shadow;
-     -moz-box-shadow: @shadow;
-          box-shadow: @shadow;
-}
+#mlf {
 
-// Blur text shadows
-.blur-text-shadow (@color: #ccc) {
-  text-shadow: @color 0px 0px 20px;
-}
+  // Box shadow
+  // For example #mlf > .box-shadow(1px 1px 8px #ccc);
+  .box-shadow (@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+  }
 
-// Line text shadows
-.line-text-shadow (@color: #ccc) {
-  text-shadow: @color 0px 1px 0px;
+  // For example #mlf > .box-shadow(inset 0 1px 0 #fff, 0 1px 5px #999);
+  .box-shadow (@shadow, @inner) {
+    -webkit-box-shadow: @shadow, @inner;
+       -moz-box-shadow: @shadow, @inner;
+            box-shadow: @shadow, @inner;
+  }
+
+  // Blur text shadows
+  .blur-text-shadow (@color: #ccc) {
+    text-shadow: @color 0px 0px 20px;
+  }
+
+  // Line text shadows
+  .line-text-shadow (@color: #ccc) {
+    text-shadow: @color 0px 1px 0px;
+  }
+
 }
