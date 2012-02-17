@@ -15,7 +15,7 @@
     @left:   1;
     @right:  1;
 
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=%d)", @from, @to, @@angle));
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=%d)", hsl(hue(@from), saturation(@from), lightness(@from)), hsl(hue(@to), saturation(@to), lightness(@to)), @@angle));
   }
 
   // Linear gradients
