@@ -41,6 +41,17 @@
     zoom: 1;
   }
 
+  // Translate 3D transforms
+  .translate3d (@x: 0, @y: 0, @z: 0) {
+    -webkit-transform: translate3d(@x, @y, @z);
+       -moz-transform: translate3d(@x, @y, @z);
+        -ms-transform: translate3d(@x, @y, @z);
+         -o-transform: translate3d(@x, @y, @z);
+            transform: translate3d(@x, @y, @z);
+
+    zoom: 1;
+  }
+
   // Skew transforms
   .skew (@x: 0, @y: 0) {
     -webkit-transform: skew(@x, @y);
