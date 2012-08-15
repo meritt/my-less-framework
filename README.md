@@ -31,6 +31,7 @@ Current functions
  * rotate
  * scale
  * translate
+ * translate3d
  * skew
  * animation
 
@@ -76,4 +77,4 @@ Also, you can use this in partial, for example if you need only animations and t
 Author
 ======
 
-Alexey Simonenko, alexey@simonenko.su
+Alexey Simonenko, [simonenko.su](http://simonenko.su)
