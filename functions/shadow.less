@@ -3,14 +3,12 @@
   // Box shadow
   // For example #mlf > .box-shadow(1px 1px 8px #ccc);
   .box-shadow (@shadow) {
-    -webkit-box-shadow: @shadow;
-            box-shadow: @shadow;
+    box-shadow: @shadow;
   }
 
   // For example #mlf > .box-shadow(inset 0 1px 0 #fff, 0 1px 5px #999);
   .box-shadow (@shadow, @inner) {
-    -webkit-box-shadow: @shadow, @inner;
-            box-shadow: @shadow, @inner;
+    box-shadow: @shadow, @inner;
   }
 
   // Blur text shadows
