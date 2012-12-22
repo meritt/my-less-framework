@@ -21,6 +21,7 @@ Current functions
 
 **Basic**
 
+ * box-sizing
  * opacity
  * wrap
  * user-select
@@ -77,4 +78,4 @@ Also, you can use this in partial, for example if you need only animations and t
 Author
 ======
 
-Alexey Simonenko, [simonenko.su](http://simonenko.su)
+* [Alexey Simonenko](mailto:alexey@simonenko.su), [simonenko.su](http://simonenko.su)
