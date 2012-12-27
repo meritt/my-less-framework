@@ -55,6 +55,8 @@ Current functions
 **Columns**
 
  * columns
+ * column-count
+ * column-gap
 
 **Scrollbars**
 
