@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>My Less Framework by meritt</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">My Less Framework</h1>
+        <p class="header">CSS3 mixins for the LESS pre-proccesor</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/meritt/my-less-framework/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/meritt/my-less-framework/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/meritt/my-less-framework">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/meritt">meritt</a></p>
+
+
+      </header>
+      <section>
+        <h1>Wait, what is the LESS?</h1>
+
+<p>If you don't know about LESS you can read about it here: <a href="http://lesscss.org">lesscss.org</a></p>
+
+<p>Mac OS X application for LESS <a href="http://incident57.com/codekit/">incident57.com/codekit</a></p>
+
+<h1>Installing</h1>
+
+<pre><code>git submodule add git://github.com/meritt/my-less-framework.git public/css/mlf
+</code></pre>
+
+<p>And after that you need to import it in your style file.</p>
+
+<p>Insert into your style.less</p>
+
+<pre><code>@import "mlf/framework.less";
+</code></pre>
+
+<h1>Functions</h1>
+
+<p><strong>Basic</strong></p>
+
+<ul>
+<li>.box-sizing(border-box);</li>
+<li>.opacity(0.5);</li>
+<li>.wrap();</li>
+<li>.user-select(none);</li>
+</ul><p><strong>Animations</strong></p>
+
+<ul>
+<li>.transition(all 500ms);</li>
+<li>.rotate(45deg);</li>
+<li>.scale(5);</li>
+<li>.translate(0, 0);</li>
+<li>.translate3d(0, 0, 0);</li>
+<li>.skew(0, 0);</li>
+<li>.animation(spinner 5s ease infinite);</li>
+</ul><p><strong>Backgrounds</strong></p>
+
+<ul>
+<li>.background-size(50px 50px);</li>
+<li>.linear-gradient(top, rgb(255, 255, 255), rgb(0, 0, 0));</li>
+<li>.radial-gradient(50% 50%, rgb(255, 255, 255), rgb(0, 0, 0));</li>
+<li>.background-horizontal(#00aaee, rgba(255, 255, 255, 0.2));</li>
+<li>.background-vertical(#ff9900, rgba(255, 255, 255, 0.2));</li>
+<li>.background-picnic(rgba(200, 0, 0, 0.5), rgba(200, 0, 0, 0.5), #ffffff);</li>
+</ul><p><strong>Borders</strong></p>
+
+<ul>
+<li>.background-clip(padding-box);</li>
+<li>.border-radius(5px);</li>
+<li>.border-left-radius(5px);</li>
+<li>.border-right-radius(5px);</li>
+</ul><p><strong>Columns</strong></p>
+
+<ul>
+<li>.columns(2, 10px);</li>
+<li>.column-count(2);</li>
+<li>.column-gap(10px);</li>
+</ul><p><strong>Scrollbars</strong></p>
+
+<ul>
+<li>.scrollbar(rgba(0, 0, 0, 0.2), 7px, 9px, 4px);</li>
+</ul><p><strong>Shadows</strong></p>
+
+<ul>
+<li>.box-shadow(1px 1px 8px #ccc);</li>
+<li>.blur-text-shadow(#ccc);</li>
+<li>.line-text-shadow(#ccc);</li>
+</ul><p>Additional it includes reset and normalize styles.</p>
+
+<h1>Partial using</h1>
+
+<p>Also, you can use this in partial, for example if you need only animations and transformations CSS3 functions, you can do this in following way:</p>
+
+<pre><code>@import "mlf/functions/animations.less";
+</code></pre>
+
+<h1>Author</h1>
+
+<ul>
+<li>
+<a href="mailto:alexey@simonenko.su">Alexey Simonenko</a>, <a href="http://simonenko.su">simonenko.su</a>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37507032-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
