@@ -8,10 +8,10 @@
 
   // Linear gradient filter for IE 6-9
   .ms-filter (@angle, @from, @to) {
-    @top:    0;
+    @top: 0;
     @bottom: 0;
-    @left:   1;
-    @right:  1;
+    @left: 1;
+    @right: 1;
 
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=%d)", hsl(hue(@from), saturation(@from), lightness(@from)), hsl(hue(@to), saturation(@to), lightness(@to)), @@angle));
   }
@@ -20,12 +20,12 @@
   .linear-gradient (@angle: top, @from: rgb(255, 255, 255), @to: rgb(0, 0, 0)) {
     background-color: @to;
 
-    @top:    to bottom;
-    @bottom: to top;
-    @left:   to right;
-    @right:  to left;
-
     .ms-filter(@angle, @from, @to);
+
+    @top: to bottom;
+    @bottom: to top;
+    @left: to right;
+    @right: to left;
 
     background-image: -webkit-linear-gradient(@angle, @from, @to);
     background-image:    -moz-linear-gradient(@angle, @from, @to);
