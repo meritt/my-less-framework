@@ -58,21 +58,11 @@
   }
 
   // Matrix transforms
-  .matrix(@scaleX: 1, @skewX: 0,
-          @skewY: 0, @scaleY: 1,
-          @translateX: 0, @translateY: 0) {
-    -webkit-transform: matrix(@scaleX, @skewX,
-                              @skewY, @scaleY,
-                              @translateX, @translateY);
-       -moz-transform: matrix(@scaleX, @skewX,
-                              @skewY, @scaleY,
-                              @translateX, @translateY);
-        -ms-transform: matrix(@scaleX, @skewX,
-                              @skewY, @scaleY,
-                              @translateX, @translateY);
-            transform: matrix(@scaleX, @skewX,
-                              @skewY, @scaleY,
-                              @translateX, @translateY);
+  .matrix (@scaleX: 1, @skewX: 0, @skewY: 0, @scaleY: 1, @translateX: 0, @translateY: 0) {
+    -webkit-transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
+       -moz-transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
+        -ms-transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
+            transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
 
     zoom: 1;
   }
