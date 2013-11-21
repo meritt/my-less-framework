@@ -3,14 +3,12 @@
   // Animation attributes
   .transition (@transition: all 500ms) {
     -webkit-transition: @transition;
-       -moz-transition: @transition;
             transition: @transition;
   }
 
   // Rotate transforms
   .rotate (@degrees: 45deg) {
     -webkit-transform: rotate(@degrees);
-       -moz-transform: rotate(@degrees);
         -ms-transform: rotate(@degrees);
             transform: rotate(@degrees);
 
@@ -20,7 +18,6 @@
   // Scale transforms
   .scale (@ratio: 5) {
     -webkit-transform: scale(@ratio);
-       -moz-transform: scale(@ratio);
         -ms-transform: scale(@ratio);
             transform: scale(@ratio);
 
@@ -30,7 +27,6 @@
   // Translate transforms
   .translate (@x: 0, @y: 0) {
     -webkit-transform: translate(@x, @y);
-       -moz-transform: translate(@x, @y);
         -ms-transform: translate(@x, @y);
             transform: translate(@x, @y);
 
@@ -40,7 +36,6 @@
   // Translate 3D transforms
   .translate3d (@x: 0, @y: 0, @z: 0) {
     -webkit-transform: translate3d(@x, @y, @z);
-       -moz-transform: translate3d(@x, @y, @z);
         -ms-transform: translate3d(@x, @y, @z);
             transform: translate3d(@x, @y, @z);
 
@@ -50,7 +45,6 @@
   // Skew transforms
   .skew (@x: 0, @y: 0) {
     -webkit-transform: skew(@x, @y);
-       -moz-transform: skew(@x, @y);
         -ms-transform: skew(@x, @y);
             transform: skew(@x, @y);
 
@@ -60,7 +54,6 @@
   // Matrix transforms
   .matrix (@scaleX: 1, @skewX: 0, @skewY: 0, @scaleY: 1, @translateX: 0, @translateY: 0) {
     -webkit-transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
-       -moz-transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
         -ms-transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
             transform: matrix(@scaleX, @skewX, @skewY, @scaleY, @translateX, @translateY);
 
@@ -70,7 +63,6 @@
   // Animations
   .animation (@animation: spinner 5s ease infinite) {
     -webkit-animation: @animation;
-       -moz-animation: @animation;
             animation: @animation;
   }
 
